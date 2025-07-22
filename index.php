@@ -11,6 +11,7 @@
   <meta name="data-spm" content="a2o4j" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="hOPtgEsnwRwGG_XfbWcsK2071uLxR41u_GAyak23Fp8" />
   <meta name="og:url" content="https://phsu.edu/academics/"/>
   <meta name="og:title" content="SITUS GACOR | Link Game Gacor Slot Gampang Menang Hari Ini Bet 200 Terpercaya" />
   <meta name="og:type" content="product" />
