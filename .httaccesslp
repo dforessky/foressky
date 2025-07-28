@@ -1,0 +1,261 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+
+RewriteRule ^sitemap\.xml$																								sitemap.xml [L]
+RewriteRule ^sitemap\.html$																								sitemap.html [L]
+
+RewriteRule ^sitemap_products1.xml$																				        sitemap_products1.xml [L]
+RewriteRule ^sitemap_products2.xml$																				        sitemap_products2.xml [L]
+RewriteRule ^sitemap_products3.xml$																				        sitemap_products3.xml [L]
+RewriteRule ^sitemap_products4.xml$																				        sitemap_products4.xml [L]
+RewriteRule ^sitemap_products5.xml$																				        sitemap_products5.xml [L]
+
+RewriteRule ^sitemap_category1.xml$																				        sitemap_category1.xml [L]
+RewriteRule ^sitemap_category2.xml$																				        sitemap_category2.xml [L]
+RewriteRule ^sitemap_category3.xml$																				        sitemap_category3.xml [L]
+RewriteRule ^sitemap_category4.xml$																				        sitemap_category4.xml [L]
+RewriteRule ^sitemap_category5.xml$																				        sitemap_category5.xml [L]
+
+RewriteRule ^sitemap_model1.xml$																				        sitemap_model1.xml [L]
+RewriteRule ^sitemap_model2.xml$																				        sitemap_model2.xml [L]
+RewriteRule ^sitemap_model3.xml$																				        sitemap_model3.xml [L]
+RewriteRule ^sitemap_model4.xml$																				        sitemap_model4.xml [L]
+RewriteRule ^sitemap_model5.xml$																				        sitemap_model5.xml [L]
+
+RewriteRule ^sitemap_pages1.xml$																				        sitemap_pages1.xml [L]
+RewriteRule ^sitemap_pages2.xml$																				        sitemap_pages2.xml [L]
+RewriteRule ^sitemap_pages3.xml$																				        sitemap_pages3.xml [L]
+RewriteRule ^sitemap_pages4.xml$																				        sitemap_pages4.xml [L]
+RewriteRule ^sitemap_pages5.xml$																				        sitemap_pages5.xml [L]
+
+RewriteRule ^indice.html$																							    indice.html [L]
+
+RewriteRule ^robots\.txt$																								robots.txt [L]
+RewriteRule ^robots$																									robots.txt [L]
+
+RewriteRule ^TikTokShopping$																			                local/dropship/tshop/tshop.php
+RewriteRule ^GoogleShopping$																			                local/dropship/gshop/gshop.php
+RewriteRule ^FacebookShopping$																			                local/dropship/fshop/fshop.php
+RewriteRule ^TrovaPrezzi$																			                    local/chrono/trovaprezzi.php
+RewriteRule ^TrovaPrezzi-promo$																			                local/chrono/trovaprezzi-promo.php
+
+
+RewriteRule ^action.php$                                                                                                core/persistent/search/action.php
+RewriteRule ^action_configurable.php$																					core/persistent/configurable/action.php
+
+RewriteRule ^cron$                                                                                                      core/chrone/chrone.php
+
+RewriteRule ^getCart$																                                    core/persistent/cart/action.php?%{QUERY_STRING}
+RewriteRule ^getProd$																                                    core/product/action.php?%{QUERY_STRING}
+RewriteRule ^getWish$																                                    core/persistent/wishlist/action.php?%{QUERY_STRING}
+RewriteRule ^getPay$																                                    core/checkout/action.php?%{QUERY_STRING}
+
+RewriteRule ^$																											core/home/home.php
+RewriteRule ^cart$																										core/cart/cart.php
+RewriteRule ^carrello$																									core/cart/cart.php
+RewriteRule ^share-([a-zA-Z0-9]+)$																			            core/cart/cart.php?val=$1
+
+RewriteRule ^registrati$																								core/register/register.php?val=1
+RewriteRule ^register$																								    core/register/register.php?val=1
+RewriteRule ^accedi$																									core/register/register.php?val=2
+RewriteRule ^login$																										core/register/register.php?val=2
+RewriteRule ^forgotpassword$																							core/register/register.php?val=3
+RewriteRule ^recupera-password$																							core/register/register.php?val=3
+RewriteRule ^logout$																									core/logout/logout.php
+
+RewriteRule ^contact$																									core/contact/contact.php
+RewriteRule ^contact-([a-zA-Z0-9-_.&+èéìùòà]+)$																	        core/contact/contact.php?val=$1
+RewriteRule ^contatti$																									core/contact/contact.php
+RewriteRule ^contatti-([a-zA-Z0-9-_.&+èéìùòà]+)$																        core/contact/contact.php?val=$1
+
+RewriteRule ^wishlist$																									core/wishlist/wishlist.php
+
+RewriteRule ^configurator$																								core/configurator/configurator.php
+RewriteRule ^configuratore$																								core/configurator/configurator.php
+RewriteRule ^act_configuratore.php$																					    core/configurator/action.php
+
+RewriteRule ^reviews$																									core/reviews/reviews.php?val=1&%{QUERY_STRING}
+RewriteRule ^reviews-success$																							core/reviews/reviews.php?val=2&%{QUERY_STRING}
+
+RewriteRule ^recensioni$																								core/reviews/reviews.php?val=1&%{QUERY_STRING}
+RewriteRule ^recensioni-successo$																						core/reviews/reviews.php?val=2&%{QUERY_STRING}
+
+RewriteRule ^account-([a-z]+)$																	                        core/account/account.php?val=$1
+RewriteRule ^profilo-([a-z]+)$																	                        core/account/account.php?val=$1
+RewriteRule ^address-([a-z]+)$																	                        core/address/address.php?val=$1
+RewriteRule ^indirizzi-([a-z]+)$																	                    core/address/address.php?val=$1
+RewriteRule ^order-([a-z]+)$																	                        core/order/order.php?val=$1
+RewriteRule ^ordini-([a-z]+)$																	                        core/order/order.php?val=$1
+RewriteRule ^invoice-([a-z]+)$																	                        core/invoice/invoice.php?val=$1
+RewriteRule ^fatture-([a-z]+)$																	                        core/invoice/invoice.php?val=$1
+RewriteRule ^shipping-([a-z]+)$																                            core/shipping/shipping.php?val=$1
+RewriteRule ^spedizioni-([a-z]+)$																                        core/shipping/shipping.php?val=$1
+RewriteRule ^credit-([a-zA-Z0-9-_.&+èéìùòà]+)$																	        core/credit/credit.php?val=$1&%{QUERY_STRING}
+RewriteRule ^crediti-([a-zA-Z0-9-_.&+èéìùòà]+)$																	        core/credit/credit.php?val=$1&%{QUERY_STRING}
+
+RewriteRule ^produttori$																								core/owner/list.php
+RewriteRule ^produttori/([a-zA-Z0-9-_.&+èéìùòà]+).html$                                                                 core/owner/detail.php?val=$1
+
+#RewriteRule ^mappa-rivenditori$																						core/distributor/distributor.php
+
+#RewriteRule ^amici$																									core/friend/friend.php
+#RewriteRule ^lista_amici/([a-zA-Z0-9-_.&+èéìùòà]+)/$														            core/friend/friend.php?typology=$1&%{QUERY_STRING}
+
+RewriteRule ^schede-tecniche$																							core/share/share.php
+RewriteRule ^schede-tecniche-([a-zA-Z0-9-\_.&+èéìùòà]+)$																core/share/assets/$1
+
+RewriteRule ^checkout-([a-zA-Z0-9-_.&+èéìùòà]+)$																        core/checkout/checkout.php?val=$1&%{QUERY_STRING}
+
+############################################
+#### sezione prodotti
+RewriteRule ^promozioni/$																								core/product/list.php?catPromo=promozioni&%{QUERY_STRING}
+RewriteRule ^promozioni/([a-zA-Z0-9-_.&+èéìùòà]+)/$																		core/product/list.php?catPromo=promozioni&cat=$1&%{QUERY_STRING}
+
+RewriteRule ^marchi$																									core/brand/brand.php
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/([a-zA-Z0-9-_.=&+èéìùòà]+)/$							                            core/product/list.php?cat=$1&brand=$2&%{QUERY_STRING}
+
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+).html$																		    core/product/detail.php?val=$1&%{QUERY_STRING}
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/([a-zA-Z0-9-_.&+èéìùòà]+).html$					                                core/product/detail.php?cat=$1&val=$2&%{QUERY_STRING}
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/([a-zA-Z0-9-_.=&+èéìùòà]+)/([a-zA-Z0-9-_.&+èéìùòà]+).html$					    core/product/detail.php?cat=$1&brand=$2&val=$3&%{QUERY_STRING}
+
+RewriteRule ^s?([a-zA-Z0-9-_.=&+èéìùòà])$																	            core/product/list.php
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/$							                                                    core/product/list.php?cat=$1&%{QUERY_STRING}
+#RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/?([a-zA-Z0-9-_.=&+èéìùòà]+)$							                            core/product/list.php?cat=$1&%{QUERY_STRING}
+#### //sezione prodotti
+############################################
+
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+).htm$																			    core/news/list.php?cat=$1&%{QUERY_STRING}
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/([a-zA-Z0-9-_.&+èéìùòà]+).htm$						                            core/news/detail.php?cat=$1&val=$2
+
+RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)$																					core/page/page.php?cat=$1
+#RewriteRule ^([a-zA-Z0-9-_.&+èéìùòà]+)/([a-zA-Z0-9-_.&+èéìùòà]+)$								                        core/page/page.php?folder=$1&cat=$2
+
+############################################
+## //gestione regole url
+
+# www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# proc/self/environ? no!
+RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+
+# disable directory browsing
+Options All -Indexes
+
+ErrorDocument 404 https://%{HTTP_HOST}/pagina-non-trovata
+ErrorDocument 500 https://%{HTTP_HOST}/pagina-non-trovata
+
+############################################
+###<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+###Order Allow,Deny
+###Deny from all
+###</FilesMatch>
+############################################
+
+<IfModule mod_rewrite.c>
+
+    ############################################
+    ## TRACE and TRACK HTTP methods disabled to prevent XSS attacks
+
+    RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
+    RewriteRule .* - [L,R=405]
+
+    ############################################
+    ## never rewrite for existing files, directories and links
+
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^\.]+)?$ $1.php [NC,L]
+
+    ############################################
+    ## Cross-Site Scripting (XSS)
+
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    RewriteRule .* index.php [F,L]
+
+</IfModule>
+
+# Attiva Cache Vary
+<IfModule mod_headers.c>
+    <FilesMatch "\\.(ico|gz)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+    <FilesMatch "\\.(jpe?g|png|gif|swf|flv|pdf)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+    <FilesMatch "\\.(js|css)$">
+        Header set Cache-Control "max-age=3600, private"
+    </FilesMatch>
+    <filesMatch "\\.(html|htm)$">
+        Header set Cache-Control "max-age=300, public"
+    </filesMatch>
+    <FilesMatch "\\.(ico|gz|jpe?g|png|gif|swf|flv|pdf|js|css|html|htm)$">
+        Header append Vary User-Agent
+    </FilesMatch>
+</IfModule>
+
+# Attiva la compressione Gzip da gpt
+<IfModule mod_deflate.c>
+    SetOutputFilter DEFLATE
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript image/svg+xml
+</IfModule>
+
+# Abilita la cache del browser per risorse statiche
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+# Abilita la cache del browser per file HTML
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "max-age=600, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Abilita la compressione Gzip per i file CSS
+<IfModule mod_deflate.c>
+    <FilesMatch "\.css$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+# Abilita la compressione Gzip per le immagini
+<IfModule mod_deflate.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif)$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+# Abilita minimizzare o rendere più veloce il caricamento dei file JavaScript
+<IfModule mod_deflate.c>
+    <FilesMatch "\.js$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+
+# Disabilita ETag
+FileETag None
+
+# Attiva la compressione Brotli (se disponibile)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml application/javascript application/x-javascript application/xml+rss application/atom+xml image/svg+xml
+</IfModule>
+
+# Attiva la cache dei file statici per migliorare le prestazioni
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule \.(jpg|jpeg|png|gif|js|css)$ - [E=cache-control:max-age=604800]
+</IfModule>
+
