@@ -258,4 +258,3 @@ FileETag None
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule \.(jpg|jpeg|png|gif|js|css)$ - [E=cache-control:max-age=604800]
 </IfModule>
-
